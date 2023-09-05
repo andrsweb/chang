@@ -54,10 +54,10 @@
 		align-items: center;
 
 		&_link {
-			width: 24px;
-			height: 24px;
+			width: 30px;
+			height: 30px;
 			margin-right: 24px;
-			transition: scale ease $tr;
+			transition: transform ease $tr;
 
 			&:last-child {
 				margin-right: 0;
@@ -69,8 +69,14 @@
 				object-fit: contain;
 			}
 
-			&:hover {
-				scale: 1.1;
+			&:hover:first-child {
+				transform: rotate(-9deg);
+				transform-origin: bottom top;
+			}
+
+			&:hover:last-child {
+				transform: rotate(9deg);
+				transform-origin: bottom top;
 			}
 		}
 	}
