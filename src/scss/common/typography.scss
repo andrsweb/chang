@@ -23,10 +23,20 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 24px;
+	color: $light;
+	text-align: center;
+	font-family: $ff;
+	font-size: 44px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: 56px;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 44px
+	}
+
+	&.gold {
+		color: $brown;
 	}
 }
 
@@ -46,7 +56,7 @@ a {
 	display: inline-block;
 	text-decoration: none;
 	color: $white;
-	transition: color ease-out $tr;
+	transition: color ease $tr;
 
 	&:hover {
 		color: $accent;
