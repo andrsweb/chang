@@ -1,0 +1,37 @@
+.hero {
+	position: relative;
+	min-height: calc(100vh - 104px);
+
+	&__wrapper {
+		padding: 12.5vw 0 12.5vw;
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	&__titles {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__subtitle, &__address {
+		color: $brown;
+		text-align: center;
+		font-family: Poppins;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 32px;
+	}
+
+	&__video {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -1;
+		object-position: 50% 50%;
+	}
+}

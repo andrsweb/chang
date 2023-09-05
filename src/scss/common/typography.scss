@@ -9,10 +9,16 @@ h4, .h4 {
 }
 
 h1, .h1 {
-	font-size: 32px;
+	color: $white;
+	text-align: center;
+	font-family: $ff;
+	font-size: 100px;
+	font-style: normal;
+	font-weight: $fw-medium;
+	line-height: 112px;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 100px
 	}
 }
 
