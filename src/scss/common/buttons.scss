@@ -1,0 +1,76 @@
+.button {
+	width: 100%;
+	max-width: 147px;
+	border: 0;
+	background-color: $black;
+	padding: 9px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $brown;
+	font-family: $ff;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: 27px;
+	border-radius: $bord;
+	border: 1px solid $light;
+	white-space: nowrap;
+	cursor: pointer;
+	position: relative;
+	transition: color ease $tr,
+		border-color ease $tr;
+
+
+	img {
+		margin-right: 8px;
+		transition: scale ease $tr;
+	}
+
+	&:hover {
+		img {
+			scale: 1.2;
+		}
+	}
+
+	&:active {
+		color: $accent;
+		border-color: $accent;
+	}
+
+	&.active {
+		border-color: $accent;		
+		animation: flicker 1.5s infinite alternate;
+
+		@keyframes flicker {
+
+			0%,
+			18%,
+			22%,
+			25%,
+			53%,
+			57%,
+			100% {
+
+				text-shadow:
+					0 0 4px #fff,
+					0 0 11px #fff,
+					0 0 19px #fff,
+					0 0 40px rgb(223, 255, 43),
+					0 0 80px rgb(179, 255, 0),
+					0 0 90px rgb(248, 244, 30),
+					0 0 100px rgb(233, 245, 62),
+					0 0 150px rgb(221, 255, 27);
+
+			}
+
+			20%,
+			24%,
+			55% {
+				text-shadow: none;
+			}
+		}
+
+		
+	}
+}

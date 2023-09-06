@@ -1,0 +1,27 @@
+<section class="menus">
+	<div class="container">
+		<div class="menus__heading">
+			<h2 class="h2">
+				Menus
+			</h2>
+			<button class="button active" data-id="0" type="button">
+				<img src="img/ico/drink.svg" width="32" height="40" loading="lazy" alt="">
+				Bar card
+			</button>
+			<button class="button" data-id="1" type="button">
+				<img src="img/ico/food.svg" width="32" height="40" loading="lazy" alt="">
+				Food card
+			</button>
+		</div>
+		<div class="menus__wrapper">
+			<div class="menu active" data-id="0">
+				@@include('./menu1-left.html')
+				@@include('./menu1-right.html')
+			</div>
+			<div class="menu" data-id="1">
+				@@include('./menu2-left.html')
+				@@include('./menu2-right.html')
+			</div>
+		</div>
+	</div>
+</section>
