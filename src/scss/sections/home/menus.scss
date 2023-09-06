@@ -21,6 +21,18 @@
 		display: flex;
 		justify-content: center;
 		margin: 45px auto 0 auto;
+		position: relative;
+
+		.menu__bg {
+			width: 150%;
+			max-width: 150%;
+			height: 740px;
+			position: absolute;
+			left: 50%;
+			top: 60px;
+			object-fit: contain;
+			transform: translateX(-50%);
+		}
 	}
 
 	.menu {
