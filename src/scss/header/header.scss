@@ -1,26 +1,140 @@
 .header {
 	padding: 20px 0;
-	background-color: $black;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	transition: padding ease $tr,
+		box-shadow ease $tr;
+	z-index: 100;
+
+	&.scrolled {
+		background-color: $black;
+		padding: 5px 0;
+		box-shadow: 1px 1px 12px $black;
+		backdrop-filter: blur(0px);
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
+
+		@media all and (min-width: 700px) {
+			justify-content: flex-start;
+		}
+
+		&.opened {
+			.header__inner {
+				display: flex;
+				flex-direction: column;
+				position: fixed;
+				justify-content: center;
+				z-index: 100;
+				right: 0;
+				top: 0;
+				width: 60%;
+				height: 100vh;
+				background-color: $light;
+				animation: transl $tr forwards linear;
+
+				@keyframes transl {
+					0% {
+						display: none;
+						opacity: 0;
+						transform: translateX(100%);
+					}
+	
+					100% {
+						display: flex;
+						opacity: 1;
+						transform: translateX(0);
+					}
+				}
+			}
+			
+			.header__menu {
+				flex-direction: column;
+				align-items: center;
+				padding: 0 10px;
+			}
+
+			.menu__item {
+				margin-right: 0;
+				margin-bottom: 20px;
+
+				&_link {
+					font-size: 20px;
+					text-align: center;
+				}
+			}
+
+			.header__social {
+				justify-content: center;
+			}
+
+			.burger__button {
+				span {
+					top: 50%;
+					transform: rotate(45deg) translateY(-50%);
+
+					&::after {
+						top: 0;
+						transform: rotate(-90deg);
+					}
+				}
+			}
+		}
+
+		&.closed {
+			.header__inner {
+				animation: fade $tr forwards ease;
+
+				@keyframes fade {
+					0% {
+						opacity: 1;
+						transform: translateX(0);
+					}
+
+					100% {
+						opacity: 0;
+						transform: translateX(100%);
+					}
+				}
+			}
+		}
 	}
 
 	&__logo {
-		width: 156px;
-		margin-right: 266px;
+		width: 100px;
+		margin-right: 30px;
 		transition: opacity ease $tr;
 
 		&:hover {
 			opacity: $op;
 		}
+
+		@media all and (min-width: $md) {
+			width: 156px;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-right: 266px;
+		}
 	}
 
 	&__inner {
-		width: calc(100% - 422px);
-		display: flex;
+		display: none;
 		justify-content: space-between;
+
+		@media all and (min-width: 700px) {
+			width: calc(100% - 136px);
+			display: flex;
+		}
+
+		@media all and (min-width: $xl) {
+			width: calc(100% - 422px);
+		}
 	}
 
 	&__menu {

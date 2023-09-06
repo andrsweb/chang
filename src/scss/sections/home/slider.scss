@@ -9,9 +9,13 @@
 	.swiper {
 		width: 100%;
 		max-width: 1000px;
-		height: 450px;
+		height: 250px;
 		overflow: visible;
 		position: relative;
+
+		@media all and (min-width: 700px) {
+			height: 450px;
+		}
 	}
 
 	.swiper-slide {
@@ -39,7 +43,7 @@
 
 	.chang__prev,
 	.chang__next {
-		display: flex;
+		display: none;
 		justify-content: center;
 		align-items: center;
 		width: 81px;
@@ -55,6 +59,10 @@
 
 		&:active {
 			background-color: rgba(111, 111, 111, 0.671);
+		}
+
+		@media all and (min-width: 700px) {
+			display: flex;
 		}
 	}
 

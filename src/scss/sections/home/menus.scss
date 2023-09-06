@@ -4,26 +4,43 @@
 
 	&__heading {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 		max-width: 735px;
 		margin: 0 auto;
-	}
 
-	.button {
-		&:first-child {
-			margin-right: 148px;
+		@media all and (min-width: 600px) {
+			flex-direction: row;
+		}
+
+		.h2 {
+			margin-bottom: 20px;
+
+			@media all and (min-width: 600px) {
+				margin-bottom: 0;
+			}
+		}
+
+		.button {
+			margin-bottom: 10px;
+
+			@media all and (min-width: 600px) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
 	&__wrapper {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		margin: 45px auto 0 auto;
 		position: relative;
 
 		.menu__bg {
+			display: block;
 			width: 150%;
 			max-width: 150%;
 			height: 740px;
@@ -33,13 +50,22 @@
 			object-fit: contain;
 			transform: translateX(-50%);
 		}
+
+		@media all and (min-width: 600px) {
+			flex-direction: row;
+		}
 	}
 
 	.menu {
 		width: 100%;
 		display: none;
+		flex-direction: column;
 		justify-content: space-between;
 		align-items: flex-start;
+
+		@media all and (min-width: 600px) {
+			flex-direction: row;
+		}
 
 		&.active {
 			display: flex;
@@ -57,10 +83,14 @@
 		}
 
 		.col__right, .col__left {
-			width: 45%;
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+
+			@media all and (min-width: 600px) {
+				width: 45%;
+			}
 		}
 
 		.col__item {
@@ -75,10 +105,14 @@
 			&_name, &_price {
 				color: $white;
 				font-family: $ff;
-				font-size: 15px;
+				font-size: 12px;
 				font-style: normal;
 				font-weight: $fw-light;
 				line-height: 16px;
+
+				@media all and (min-width: 600px) {
+					font-size: 15px;
+				}
 			}
 
 			&_name {
@@ -112,11 +146,15 @@
 			height: 40px;
 			text-align: center;
 			font-family: $ff;
-			font-size: 18px;
+			font-size: 15px;
 			font-style: normal;
 			font-weight: $fw-regular;
 			line-height: 16px;
 			border-bottom: 1px solid $table;
+
+			@media all and (min-width: 600px) {
+				font-size: 18px;
+			}
 		}
 
 		.col__title {

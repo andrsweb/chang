@@ -1,11 +1,29 @@
 .hero {
 	position: relative;
-	min-height: calc(100vh - 104px);
+	min-height: 300px;
+	margin-top: 92px;
+
+	@media all and (min-width: 700px) {
+		min-height: 400px;
+	}
+
+	@media all and (min-width: $md) {
+		margin-top: 115px;
+	}
+
+	@media all and (min-width: $xxl) {
+		min-height: calc(100vh - 121px);
+		margin-top: 121px;
+	}
 
 	&__wrapper {
-		padding: 12.5vw 0 12.5vw;
 		display: flex;
-		justify-content: flex-start;
+		justify-content: center;
+		padding: 12.5vw 0 12.5vw;
+
+		@media all and (min-width: $lg) {
+			justify-content: flex-start;
+		}
 	}
 
 	&__titles {
@@ -18,10 +36,14 @@
 		color: $brown;
 		text-align: center;
 		font-family: Poppins;
-		font-size: 24px;
+		font-size: 20px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 32px;
+
+		@media all and (min-width: 700px) {
+			font-size: 24px;
+		}
 	}
 
 	&__video {
@@ -32,6 +54,10 @@
 		height: 100%;
 		object-fit: cover;
 		z-index: -1;
-		object-position: 50% 50%;
+		object-position: 80% 50%;
+
+		@media all and (min-width: 700px) {
+			object-position: 50% 50%;
+		}
 	}
 }

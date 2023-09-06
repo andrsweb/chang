@@ -13,9 +13,19 @@
 	}
 
 	&__item {
-		width: calc(100% / 4);
+		width: calc(100% / 1);
 		padding: 0 14px;
 		border-radius: $bord;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $sm) {
+			width: calc(100% / 2);
+		}
+
+		@media all and (min-width: $lg) {
+			width: calc(100% / 4);
+			margin-bottom: 0;
+		}
 	}
 
 	.item__inner {
@@ -45,13 +55,17 @@
 			color: $white;
 			text-align: center;
 			font-family: $ff;
-			font-size: 24px;
+			font-size: 20px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: 32px;
 			width: 100%;
 			max-width: 201px;
 			text-shadow: 4px 1px 1px $black;
+
+			@media all and (min-width: 700px) {
+				font-size: 24px;
+			}
 		}
 
 		.item__hidden {
@@ -66,7 +80,7 @@
 			color: $white;
 			text-align: center;
 			font-family: $ff;
-			font-size: 24px;
+			font-size: 20px;
 			font-style: normal;
 			font-weight: $fw-medium;
 			line-height: 32px;
@@ -77,6 +91,10 @@
 			visibility: hidden;
 			transition: opacity ease $tr,
 				visibility ease $tr;
+
+				@media all and (min-width: 700px) {
+					font-size: 24px;
+				}
 		}
 	}
 

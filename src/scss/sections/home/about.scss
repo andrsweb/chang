@@ -29,9 +29,13 @@
 		color: $light;
 		text-align: center;
 		font-family: $ff;
-		font-size: 21px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 30px;
+
+		@media all and (min-width: 700px) {
+			font-size: 21px;
+		}
 	}
 }
