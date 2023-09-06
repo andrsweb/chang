@@ -1,0 +1,180 @@
+.footer {
+	padding: 120px 0 0;
+	background-color: $black;
+	position: relative;
+
+	&__logo {
+		position: absolute;
+		left: 50%;
+		bottom: 20px;
+		transform: translateX(-50%);
+		z-index: -1;
+	}
+	
+	&__wrapper {
+		display: flex;
+	}
+
+	.h2 {
+		margin-bottom: 75px;
+	}
+
+	&__info {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 50px 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__works {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 118px;
+		margin-bottom: 36px;
+	}
+
+	&__address {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 227px;
+		margin-bottom: 36px;
+		
+
+		.footer__text {
+			position: relative;
+			padding-left: 20px;
+		}
+
+		.geo {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+
+	&__contact {
+		display: flex;
+	}
+
+	&__nums {
+		display: flex;
+		flex-direction: column;
+		margin-right: 11px;
+
+		&_wrapper {
+			display: flex;
+			align-items: center;
+			margin-bottom: 36px;
+		}
+	}
+
+	&__social {
+		margin-right: 10px;
+		transition: opacity ease $tr;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	&__email {
+		color: $brown;
+		font-family: $ff;
+		font-size: 13px;
+		font-style: normal;
+		font-weight: $fw-light;
+		line-height: 20px;
+		text-align: center;
+		margin-bottom: 36px;
+
+		a {
+			color: $white;
+		}
+	}
+
+	&__media {
+		width: 100%;
+		max-width: 168px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto 100px auto;
+
+		&_title {
+			color: $brown;
+			font-family: $ff;
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 20px;
+		}
+
+		&_link {
+			width: 30px;
+			height: 30px;
+			transition: opacity ease $tr;
+
+			&:hover {
+				opacity: $op;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+
+	&__rights {
+		color: $brown;
+		font-family: $ff;
+		font-size: 10px;
+		font-style: normal;
+		font-weight: $fw-light;
+		line-height: 13px;
+		text-align: center;
+	}
+
+	&__title {
+		color: $brown;
+		font-family: $ff;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 27px;
+		margin-bottom: 12px;
+	}
+
+	&__text {
+		color: $white;
+		text-align: center;
+		font-family: $ff;
+		font-size: 13px;
+		font-style: normal;
+		font-weight: $fw-light;
+		line-height: 20px;
+	}
+
+	&__map {
+		width: 50%;
+
+		.iframe-map {
+			width: 100%;
+			height: 100%;
+			border-top-left-radius: $bord;
+			border-top-right-radius: $bord;
+		}
+	}
+}
