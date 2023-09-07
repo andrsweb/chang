@@ -106,7 +106,7 @@
 		}
 	}
 
-	@media all and (min-width: 700px) {
+	@media all and (min-width: $xl) {
 		display: none;
 	}
 }

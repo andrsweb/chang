@@ -30,7 +30,7 @@
 		align-items: center;
 		justify-content: space-between;
 
-		@media all and (min-width: 700px) {
+		@media all and (min-width: $xl) {
 			justify-content: flex-start;
 		}
 
@@ -43,10 +43,11 @@
 				z-index: 100;
 				right: 0;
 				top: 0;
-				width: 60%;
+				width: 65%;
 				height: 100vh;
 				background-color: $light;
 				animation: transl $tr forwards linear;
+				padding: 5px;
 
 				@keyframes transl {
 					0% {
@@ -128,7 +129,7 @@
 			width: 156px;
 		}
 
-		@media all and (min-width: $lg) {
+		@media all and (min-width: $xl) {
 			margin-right: 266px;
 		}
 	}
@@ -138,8 +139,7 @@
 		justify-content: space-between;
 		position: relative;
 
-		@media all and (min-width: 700px) {
-			width: calc(100% - 136px);
+		@media all and (min-width: $xl) {
 			display: flex;
 		}
 
@@ -252,5 +252,84 @@
 
 	@media all and (min-width: $xxl) {
 		left: 3%;
+	}
+}
+
+.dropdown {
+	transition: padding ease $tr;
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+	padding: 0px 5px 5px 5px;
+
+	&__wrapper {
+		display: flex;
+		width: 110px;
+		height: 30px;
+		position: relative;
+	}
+
+	&.opened {
+		background-color: $black;
+		border-radius: 10px;
+	}
+
+	&__lang {
+		display: flex;
+		align-items: center;
+		margin-top: 5px;
+
+		img {
+			margin-right: 5px;
+		}
+	}
+
+	&-start {
+		display: flex;
+		align-items: center;
+		color: $brown;
+
+		img {
+			margin-right: 5px;
+		}
+	}
+
+	&-open {
+		overflow: hidden;
+		height: 0;
+		display: flex;
+		flex-direction: column;
+		transition: height ease 0.3s;
+	}
+
+	&-text {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		color: $black;
+		font-family: $ff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		max-width: 617px;
+
+		@media all and (min-width: $md) {
+			font-size: 17px;
+		}
+
+		@media all and (min-width: 2560px) {
+			font-size: 19px;
+		}
+	}
+
+	&-link {
+		color: $accent;
+		margin-top: 25px;
+
+		&:hover {
+			color: $accent;
+		}
 	}
 }
