@@ -18,9 +18,9 @@
 }
 
 .loader {
+	display: flex;
 	width: 100vw;
 	height: 100vh;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: fixed;
@@ -29,19 +29,13 @@
 	z-index: 100;
 	background-color: $black;
 
+	&.opened {
+		transition: 0.3s opacity;
+		opacity: 0;
+	}
+
 	&.closed {
-		animation: on 1s forwards ease;
-
-		@keyframes on {
-			0% {
-				opacity: 1;
-			}
-
-			100% {
-				opacity: 0;
-				display: none;
-			}
-		}
+		display: none;
 	}
 }
 

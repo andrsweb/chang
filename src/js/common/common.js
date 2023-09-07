@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 window.onload = function () {
 	const loader = document.querySelector('.loader')
 	setTargetElement(document.querySelector('#load-lock'))
-
 	loader.classList.add('opened');
 	disableBodyScroll(getTargetElement(), { reserveScrollBarGap: true })
 	window.setTimeout(function () {
