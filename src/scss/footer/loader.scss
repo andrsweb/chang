@@ -29,16 +29,17 @@
 	z-index: 100;
 	background-color: $black;
 
-	&.opened {
-		animation: fade $tr forwards ease;
+	&.closed {
+		animation: on 1s forwards ease;
 
-		@keyframes fade {
+		@keyframes on {
 			0% {
 				opacity: 1;
 			}
 
 			100% {
 				opacity: 0;
+				display: none;
 			}
 		}
 	}
