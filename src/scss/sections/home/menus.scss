@@ -151,6 +151,7 @@
 			font-weight: $fw-regular;
 			line-height: 16px;
 			border-bottom: 1px solid $table;
+			text-transform: uppercase;
 
 			@media all and (min-width: 600px) {
 				font-size: 18px;

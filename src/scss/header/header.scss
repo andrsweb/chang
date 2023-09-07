@@ -8,6 +8,16 @@
 		box-shadow ease $tr;
 	z-index: 100;
 
+	.lang {
+		width: 30px;
+		height: 30px;
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
 	&.scrolled {
 		background-color: $black;
 		padding: 5px 0;
@@ -126,6 +136,7 @@
 	&__inner {
 		display: none;
 		justify-content: space-between;
+		position: relative;
 
 		@media all and (min-width: 700px) {
 			width: calc(100% - 136px);
@@ -188,7 +199,7 @@
 				transform-origin: bottom top;
 			}
 
-			&:hover:last-child {
+			&:hover:nth-child(2) {
 				transform: rotate(9deg);
 				transform-origin: bottom top;
 			}
