@@ -2,6 +2,10 @@
 	padding: 100px 0 150px;
 	background-color: $black;
 
+	@media all and (min-width: $lg) {
+		padding: 130px 0 200px;
+	}
+
 	.container-fluid {
 		padding: 0;
 	}
